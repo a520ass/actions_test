@@ -23,4 +23,4 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.PORT }}
           source: "tests/*"
-          target: "tmp"
+          target: "/tmp"
