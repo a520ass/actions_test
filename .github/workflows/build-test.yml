@@ -2,13 +2,12 @@
 # 测试
 #=================================================
 
-name: scp files
+name: test scp
 
 on: [push]
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-18.04
 
     steps:
