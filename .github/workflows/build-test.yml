@@ -24,3 +24,10 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "tests/*"
           target: "/tmp"
+
+      - name: Upload to release
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: tests/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
