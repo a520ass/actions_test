@@ -27,11 +27,11 @@ jobs:
           zip --junk-paths ${scpfilename} tests/*
 
       - name: copy file via ssh password
-          uses: appleboy/scp-action@master
-          with:
-            host: ${{ secrets.HOST }}
-            username: ${{ secrets.USERNAME }}
-            password: ${{ secrets.PASSWORD }}
-            port: ${{ secrets.PORT }}
-            source: ${{ scpfilename }}
-            target: "/root"
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: ${{ scpfilename }}
+          target: "/root"
