@@ -17,6 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
+      - name: download github files # This would actually build your project, using zip for an example artifact
+        run: |
+          wget https://github.com/a520ass/Actions-OpenWrt/releases/download/v19.07.2-v2-ath79/my-artifact.zip
+
       - name: zip files # This would actually build your project, using zip for an example artifact
         run: |
           zip --junk-paths my-artifact tests/*
