@@ -21,19 +21,6 @@ jobs:
         run: |
           wget https://github.com/a520ass/Actions-OpenWrt/releases/download/v19.07.2-v2-ath79/my-artifact.zip
 
-#      - name: copy file via ssh password
-#        uses: appleboy/scp-action@master
-#        with:
-#          host: ${{ secrets.HOST }}
-#          username: ${{ secrets.USERNAME }}
-##          key: ${{ secrets.KEY }}
-##          passphrase: ${{ secrets.PASSPHRASE }}
-#          password: ${{ secrets.PASSWORD }}
-#          port: ${{ secrets.PORT }}
-##          source: "tests/*"
-#          source: "my-artifact.zip"
-#          target: "/root"
-
       - name: zip files # This would actually build your project, using zip for an example artifact
           run: |
             zip --junk-paths my-artifact tests/*

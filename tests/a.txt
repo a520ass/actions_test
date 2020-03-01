@@ -1,1 +1,12 @@
-aaa
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+#          key: ${{ secrets.KEY }}
+#          passphrase: ${{ secrets.PASSPHRASE }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+#          source: "tests/*"
+          source: "my-artifact.zip"
+          target: "/root"
